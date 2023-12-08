@@ -1,5 +1,6 @@
 package com.hlr.controller;
 
+import com.hlr.db.HlrPoolException;
 import com.hlr.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,7 @@ public class dome {
     private ConfigService configService;
 
     @GetMapping("/hello")
-    public String hello() {
+    public String hello() throws HlrPoolException {
         return configService.queryTop();
     }
 
