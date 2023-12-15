@@ -6,13 +6,13 @@
 
     <!--    第一步-->
     <parent>
-        <groupId>com.hlr.parent.msa.web</groupId>
+        <groupId>hlr.parent.msa.web</groupId>
         <artifactId>hlr-parent-msa-web</artifactId>
         <version>1.0.1-HLR</version>
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>SimpleServiceDome</artifactId>
+    <artifactId>1-SimpleServiceDome</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

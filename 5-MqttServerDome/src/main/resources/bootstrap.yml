@@ -1,0 +1,30 @@
+server:
+  port: 80
+spring:
+  application:
+    name: testModesfsfajsldfjkals
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+        watch:
+          enabled: false
+dubbo:
+  enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+hlr:
+  mqtt:
+    mqttAddrs: tcp://localhost:1883
+    userName: hlr
+    passWord: hlr
+    keepAliveInterval: 2000
+    cleanSession: true
+    connectionTimeout: 1000

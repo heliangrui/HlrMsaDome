@@ -1,0 +1,25 @@
+server:
+  port: 80
+spring:
+  application:
+    name: testwebmsa
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+        watch:
+          enabled: false
+dubbo:
+  enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+hlr:
+  kafka:
+    kafkaAddrs: ch01.local:9092
