@@ -1,8 +1,12 @@
 package hlr.thread;
 
 import com.hlr.core.event.AbstractLoopThread;
+import com.hlr.core.event.async.IAsyncExecer;
+import com.hlr.core.event.async.TaskExecuter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * DomeThread
@@ -11,16 +15,16 @@ import org.slf4j.LoggerFactory;
  *
  * @author hlr
  */
+@Component
 public class DomeThread extends AbstractLoopThread {
 
     private Logger logger = LoggerFactory.getLogger(DomeThread.class);
 
-    public DomeThread(String name) {
-        super(name);
-    }
+    @Autowired
+    private TaskExecuter taskExecuter;
 
-    public DomeThread(String name, boolean needlog) {
-        super(name, needlog);
+    public DomeThread() {
+        super("DomeThread", false);
     }
 
     /**
@@ -36,6 +40,30 @@ public class DomeThread extends AbstractLoopThread {
             throw new RuntimeException(e);
         }
         logger.info("do domeThread");
+        taskExecuter.add(new IAsyncExecer() {
+            @Override
+            public void asyncExec(Object[] params) throws Exception {
+                logger.info((String) params[0]);
+            }
+
+            @Override
+            public String getExecName() {
+                return null;
+            }
+        }, "dome");
+
+        taskExecuter.add(new IAsyncExecer() {
+            @Override
+            public void asyncExec(Object[] params) throws Exception {
+                logger.info((String) params[0]);
+            }
+
+            @Override
+            public String getExecName() {
+                return null;
+            }
+        }, "dome111");
+
     }
 
     @Override

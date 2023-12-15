@@ -1,6 +1,7 @@
 package hlr;
 
 import com.hlr.core.event.ThreadsPoolFactory;
+import com.hlr.core.event.async.TaskExecuter;
 import hlr.thread.DomeThread;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,10 +22,18 @@ public class ApplicationMain {
     }
 
     @Bean
-    public ThreadsPoolFactory threadsPoolFactory() {
+    public ThreadsPoolFactory threadsPoolFactory(DomeThread domeThread,TaskExecuter taskExecuter) {
         ThreadsPoolFactory threadsPoolFactory = new ThreadsPoolFactory();
-        threadsPoolFactory.addPool(new DomeThread("dome-thread-1"));
+        threadsPoolFactory.addPool(domeThread);
+        threadsPoolFactory.addPool(taskExecuter);
         return threadsPoolFactory;
+    }
+    
+    @Bean
+    public TaskExecuter taskExecuter(){
+        TaskExecuter taskExecuter = new TaskExecuter();
+        taskExecuter.setThreadPoolSize(1);
+        return taskExecuter;
     }
 
 }
