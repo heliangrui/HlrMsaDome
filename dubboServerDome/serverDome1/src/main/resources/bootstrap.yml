@@ -1,0 +1,34 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: testwebmsa
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+        watch:
+          enabled: false
+dubbo:
+  application:
+    register-mode: instance
+  scan:
+    base-packages: com.server.service.impl
+  registry:
+    address: nacos://172.16.10.87:8848
+  protocol:
+    name: dubbo
+    accesslog: false
+    threads: 400
+    port: 20890
+  consumer:
+    check: false
+    retries: 0
+    filter: traceFilter
+  provider:
+    retries: 0
+    timeout: 3000
+    filter: traceFilter
+    

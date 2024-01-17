@@ -1,8 +1,10 @@
-package com.hlr.service.impl;
+package com.server.service.impl;
 
-import com.hlr.dao.ConfigDao;
+import com.server.api.DomeProviderOne;
+import com.server.dao.ConfigDao;
 import com.hlr.db.HlrPoolException;
-import com.hlr.service.ConfigService;
+import com.server.service.ConfigService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +18,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConfigServiceImpl implements ConfigService {
     
+    
+    @DubboReference
+    private DomeProviderOne domeProviderOne;
+    
     @Autowired
     private ConfigDao configDao;
     @Override
     public String queryTop() throws HlrPoolException {
+        System.out.println("----------");
+        System.out.println(domeProviderOne.getBoolean());
         return configDao.getTop();
     }
 }
