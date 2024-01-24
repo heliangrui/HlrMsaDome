@@ -1,4 +1,4 @@
-package com.server.api;
+package com.hlr.api;
 
 /**
  * DomeProviderOne

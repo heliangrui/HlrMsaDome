@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author hlr
  */
 @SpringBootApplication
-public class ApplicationMain {
+public class ApplicationMain1 {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationMain.class);
+        SpringApplication.run(ApplicationMain1.class);
     }
     
 }

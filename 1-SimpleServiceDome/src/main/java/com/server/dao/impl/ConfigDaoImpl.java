@@ -1,6 +1,6 @@
-package com.server.dao.impl;
+package com.hlr.dao.impl;
 
-import com.server.dao.ConfigDao;
+import com.hlr.dao.ConfigDao;
 import com.hlr.db.HlrPoolException;
 import com.hlr.db.template.DBTemplate;
 import org.springframework.stereotype.Repository;

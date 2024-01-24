@@ -1,6 +1,6 @@
-package com.server.service.impl;
+package com.hlr.service.impl;
 
-import com.server.api.DomeProviderOne;
+import com.hlr.api.DomeProviderOne;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**

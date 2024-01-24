@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.example</groupId>
-        <artifactId>dubboServerDome</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>hlr.parent.msa.web</groupId>
+        <artifactId>hlr-parent-msa-web</artifactId>
+        <version>1.0.1-HLR</version>
     </parent>
 
     <artifactId>serverDome2</artifactId>
@@ -17,4 +17,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    
+    
 </project>

@@ -1,7 +1,7 @@
-package com.server.controller;
+package com.hlr.controller;
 
 import com.hlr.db.HlrPoolException;
-import com.server.service.ConfigService;
+import com.hlr.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

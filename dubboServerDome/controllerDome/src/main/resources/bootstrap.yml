@@ -2,17 +2,25 @@ server:
   port: 8088
 spring:
   application:
-    name: testwebmsa1112222222
-    
+    name: testapimsa
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        enabled: false
+        watch:
+          enabled: false
 dubbo:
   application:
     register-mode: instance
+    metadata-type: remote
   registry:
-    address: nacos://172.16.10.87:8848
+    address: nacos://127.0.0.1:8848
   protocol:
     name: dubbo
-    accesslog: false
     threads: 400
+    port: -1
   consumer:
     check: false
     retries: 0

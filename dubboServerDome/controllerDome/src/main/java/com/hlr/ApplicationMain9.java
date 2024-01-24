@@ -1,4 +1,4 @@
-package com.server;
+package com.hlr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,11 +12,11 @@ import org.springframework.context.annotation.ComponentScan;
  * @author hlr
  */
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.server.api","com.server"})
-public class ApplicationMain {
+@ComponentScan(basePackages = {"com.hlr.api", "com.hlr"})
+public class ApplicationMain9 {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationMain.class);
+        SpringApplication.run(ApplicationMain9.class);
     }
 
 }
