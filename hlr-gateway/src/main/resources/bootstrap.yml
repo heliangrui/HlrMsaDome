@@ -1,0 +1,20 @@
+server:
+  port: 80
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.16.200:8848
+        file-extension: yaml
+        namespace: dev
+        group: ${spring.application.name}
+dubbo:
+  enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

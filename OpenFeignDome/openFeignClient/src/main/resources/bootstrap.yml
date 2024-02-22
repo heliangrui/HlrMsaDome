@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: openFeignClient
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        loadbalancer:
+          cache:
+            enabled: false
+        enabled: true
+
+dubbo:
+  enabled: false
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 3000
+        read-timeout: 3000
+  httpclient:
+    enabled: true
+    max-connections: 1000
+    max-connections-per-route: 1000
