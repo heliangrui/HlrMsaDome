@@ -5,15 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>hlr.parent.msa</groupId>
-        <artifactId>hlr-parent-msa</artifactId>
+        <groupId>hlr.parent.msa.web</groupId>
+        <artifactId>hlr-parent-msa-web</artifactId>
         <version>1.0.1-HLR</version>
     </parent>
     
     <groupId>com.hlr.gateway</groupId>
     <artifactId>hlr-gateway</artifactId>
     <version>1.0-SNAPSHOT</version>
-    
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -27,5 +26,4 @@
             <version>4.1.1</version>
         </dependency>
     </dependencies>
-
 </project>

@@ -1,15 +1,25 @@
 server:
-  port: 80
+  port: 70
 spring:
+  main:
+    web-application-type: reactive
   application:
     name: gateway
   cloud:
     nacos:
       config:
-        server-addr: 192.168.16.200:8848
-        file-extension: yaml
-        namespace: dev
-        group: ${spring.application.name}
+        enabled: false
+      discovery:
+        enabled: false
+    gateway:
+      routes:
+        - id: user-baidu
+          uri: "http://localhost:8081/"
+          order: 1
+          predicates:
+            - Path=/user-baidu/**
+          filters: 
+            - StripPrefix=1
 dubbo:
   enabled: false
 

@@ -1,4 +1,4 @@
-package com.hlr.dao;
+package com.server.dao;
 
 import com.hlr.db.HlrPoolException;
 
