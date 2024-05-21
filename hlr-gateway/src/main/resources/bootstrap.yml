@@ -1,5 +1,5 @@
 server:
-  port: 70
+  port: 7070
 spring:
   main:
     web-application-type: reactive
@@ -8,16 +8,19 @@ spring:
   cloud:
     nacos:
       config:
-        enabled: false
-      discovery:
-        enabled: false
+        enabled: true
+        server-addr: 172.16.10.68:8848
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
-        - id: user-baidu
-          uri: "http://localhost:8081/"
+        - id: labelapimsa
+          uri: lb://labelapimsa
           order: 1
           predicates:
-            - Path=/user-baidu/**
+            - Path=/labelapimsa/**
           filters: 
             - StripPrefix=1
 dubbo:
