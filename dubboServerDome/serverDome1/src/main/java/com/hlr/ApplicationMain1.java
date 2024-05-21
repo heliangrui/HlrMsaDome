@@ -27,31 +27,31 @@ public class ApplicationMain1 {
         SpringApplication.run(ApplicationMain1.class);
     }
     
-    
-    @Scheduled(cron = "0/10 * * * * ? ")
-    public void sout(){
-
-        ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
-
-        long[] allThreadIds = threadMXBean.getAllThreadIds();
-        ThreadInfo[] threadInfo = threadMXBean.getThreadInfo(allThreadIds);
-
-        for (ThreadInfo info : threadInfo) {
-            System.out.println(info.getThreadId());
-            System.out.print("-");
-            System.out.print(info.getThreadName());
-            System.out.print("-");
-            System.out.println(info.getThreadState());
-            System.out.print("-");
-            System.out.println(info.getLockInfo());
-            System.out.print("-");
-            System.out.println(info.getWaitedTime());
-            
-        }
-        
-        
-
-    }
+//
+//    @Scheduled(cron = "0/10 * * * * ? ")
+//    public void sout(){
+//
+//        ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
+//
+//        long[] allThreadIds = threadMXBean.getAllThreadIds();
+//        ThreadInfo[] threadInfo = threadMXBean.getThreadInfo(allThreadIds);
+//
+//        for (ThreadInfo info : threadInfo) {
+//            System.out.println(info.getThreadId());
+//            System.out.print("-");
+//            System.out.print(info.getThreadName());
+//            System.out.print("-");
+//            System.out.println(info.getThreadState());
+//            System.out.print("-");
+//            System.out.println(info.getLockInfo());
+//            System.out.print("-");
+//            System.out.println(info.getWaitedTime());
+//
+//        }
+//
+//
+//
+//    }
     
     
 }

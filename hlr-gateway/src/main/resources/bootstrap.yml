@@ -9,18 +9,18 @@ spring:
     nacos:
       config:
         enabled: true
-        server-addr: 172.16.10.68:8848
+        server-addr: 192.168.5.1:8848
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: labelapimsa
-          uri: lb://labelapimsa
+        - id: testapimsa
+          uri: lb://testapimsa
           order: 1
           predicates:
-            - Path=/labelapimsa/**
+            - Path=/testapimsa/**
           filters: 
             - StripPrefix=1
 dubbo:

@@ -2,7 +2,7 @@ server:
   port: 8082
 spring:
   application:
-    name: testwebmsa
+    name: serverDome1
   cloud:
     nacos:
       config:
@@ -18,12 +18,12 @@ dubbo:
   scan:
     base-packages: com.hlr.service.impl
   registry:
-    address: nacos://172.16.10.87:8848
+    address: nacos://192.168.5.1:8848
   protocol:
     name: dubbo
     accesslog: false
     threads: 400
-    port: -1
+    port: 20881
   consumer:
     check: false
     retries: 0
@@ -32,4 +32,3 @@ dubbo:
     retries: 0
     timeout: 3000
     filter: traceFilter
-    

@@ -1,0 +1,10 @@
+[dbconfig]
+watch=1
+
+[config]
+url=jdbc:mysql://m.local:3307/albb_config?useUnicode=true&characterEncoding=UTF-8
+username=root
+password=123456qqq
+maxconn=10
+driver=org.gjt.mm.mysql.Driver
+activetime=20000

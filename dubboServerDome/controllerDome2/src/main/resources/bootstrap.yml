@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8089
 spring:
   application:
     name: testapimsa
@@ -18,12 +18,11 @@ dubbo:
     register-mode: instance
     metadata-type: remote
   registry:
-    address: nacos://192.168.5.1:8848
-    port: 20888
+    address: nacos://127.0.0.1:8848
   protocol:
     name: dubbo
     threads: 400
-    port: 20882
+    port: -1
   consumer:
     check: false
     retries: 0
